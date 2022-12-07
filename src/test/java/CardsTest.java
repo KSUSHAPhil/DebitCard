@@ -21,8 +21,9 @@ public class CardsTest {
 
     @BeforeEach
     void setUp() {
-
-       driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        driver = new ChromeDriver();
+        driver.get("http://localhost:9999");
     }
 
     @AfterEach
