@@ -22,7 +22,10 @@ public class CardsTest {
     @BeforeEach
     void setUp() {
         ChromeOptions options = new ChromeOptions();
-        driver = new ChromeDriver();
+        options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--headless");
+        driver = new ChromeDriver(options);
         driver.get("http://localhost:9999");
     }
 
