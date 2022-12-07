@@ -8,6 +8,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class CardsTest {
     private WebDriver driver;
@@ -15,7 +16,7 @@ public class CardsTest {
    @BeforeAll
     static void setUpAll() {
 
-       System.setProperty("webdriver.chrome.driver","driver/win/chromedriver.exe");
+      WebDriverManager.chromedriver().setup();
     }
 
     @BeforeEach
